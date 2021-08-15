@@ -12,7 +12,7 @@ Then update the environment file:
 cp .env.exemple .env
 ```
 
-And give the token to the variable `VUE_APP_TOKEN`
+And give the API token to the variable `VUE_APP_TOKEN`
 
 ### Compiles and hot-reloads for development
 
