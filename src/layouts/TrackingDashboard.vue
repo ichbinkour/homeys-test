@@ -70,7 +70,7 @@ export default {
       this.isFetchingData = true;
 
       this.$axios
-        .get('/tracking')
+        .get('/api/tracking')
         .then((response) => {
           this.trackingData = response.data;
           this.fetchingError = false;

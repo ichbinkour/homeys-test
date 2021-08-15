@@ -9,7 +9,7 @@ import axios from "axios";
 // axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
 let config = {
-  baseURL: process.env.baseURL || process.env.apiUrl || "https://api-buildings.homeys.io/api",
+  baseURL: process.env.baseURL || process.env.apiUrl || "https://api-buildings.homeys.io/",
   timeout: 60 * 1000,
   contentType: 'application/json; charset=utf-8',
   headers: {
