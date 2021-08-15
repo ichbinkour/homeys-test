@@ -1,14 +1,26 @@
+
+/**
+ * It will take a date start and a date end and retrieve all the dates in-between
+ * @param {string} start 
+ * @param {string} end 
+ * @returns An array of dates between two dates
+ */
 export function createDateArrayRange(start, end) {
   for (
-    var arr = [], dt = new Date(start);
-    dt <= end;
-    dt.setDate(dt.getDate() + 1)
+    var arr = [], date = new Date(start);
+    date <= end;
+    date.setDate(date.getDate() + 1)
   ) {
-    arr.push(dt.toISOString().split('T')[0]);
+    arr.push(date.toISOString().split('T')[0]);
   }
   return arr;
 }
 
+/**
+ * @param {Array} trackingData The tracking data we want to process
+ * @param {Array} dateArrayRange The array of dates
+ * @returns An array of tracking data corresponding to specific dates
+ */
 export function rawTrackingData(trackingData, dateArrayRange) {
   let rawData = [];
 
@@ -31,6 +43,13 @@ export function rawTrackingData(trackingData, dateArrayRange) {
   return rawData;
 }
 
+/**
+ * This method is almost the same as the previous one (rawTrackingData) 
+ * except this one gives a better organisation in the array for some specific cases
+ * @param {Array} trackingData The tracking data we want to process
+ * @param {Array} dateArrayRange The array of dates
+ * @returns An array of tracking data corresponding to specific dates
+ */
 export function cleanTrackingData(trackingData, dateArrayRange) {
   let cleanData = [];
 

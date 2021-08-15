@@ -47,6 +47,7 @@ export default {
         return {
           label: path,
           data: this.getDataFromPath(path),
+          // By default the background is plain, we give a transparent one to only have the borders
           backgroundColor: 'rgba(0, 0, 255, 0)',
           borderColor: createRandomRgb(),
         };
@@ -59,6 +60,7 @@ export default {
   methods: {
     fillChart() {
       this.uniquePaths = [
+        // This will give us the unique paths of the array
         ...new Set(this.trackingData.map((item) => item.path)),
       ];
 
@@ -73,6 +75,7 @@ export default {
       result = this.trackingData.filter((data) => {
         return data.path === path;
       });
+
       return result.map((res) => res.count);
     },
   },

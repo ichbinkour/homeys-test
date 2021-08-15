@@ -7,7 +7,7 @@
         v-model="dateRange.from"
         class="mb-2"
         :max="fromMax"
-        @input="(event) => (toMin = event)"
+        @input="(value) => (toMin = value)"
       ></b-form-datepicker>
     </b-col>
 
@@ -18,7 +18,7 @@
         v-model="dateRange.to"
         class="mb-2"
         :min="toMin"
-        @input="(event) => (fromMax = event)"
+        @input="(value) => (fromMax = value)"
       ></b-form-datepicker>
     </b-col>
 

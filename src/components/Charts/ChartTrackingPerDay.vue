@@ -51,6 +51,7 @@ export default {
         datasets: [
           {
             label: 'Nombre de connexions par jour',
+            // By default the background is plain, we give a transparent one to only have the borders
             backgroundColor: 'rgba(0, 0, 255, 0)',
             borderColor: '#47b784',
             data: this.getDaysCounts,
